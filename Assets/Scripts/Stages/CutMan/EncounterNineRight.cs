@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Enemies.Components;
 using EnemyScript;
 using UnityEngine;
 
@@ -6,9 +7,9 @@ namespace Stages.CutMan
 {
     public class EncounterNineRight : IEncounter
     {
-        public List<Enemy> Spawn(EnemySpawner spawner)
+        public List<ScriptedEnemy> Spawn(EnemySpawner spawner)
         {
-            List<Enemy> enemies = new();
+            List<ScriptedEnemy> enemies = new();
             for (var i = 1; i <= 9; i++)
             {
                 var y2 = 10 - i;

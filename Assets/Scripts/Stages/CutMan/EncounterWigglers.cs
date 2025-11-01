@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Enemies.Components;
 using EnemyScript;
 using UnityEngine;
 
@@ -6,9 +7,9 @@ namespace Stages.CutMan
 {
     public class EncounterWigglers : IEncounter
     {
-        public List<Enemy> Spawn(EnemySpawner spawner)
+        public List<ScriptedEnemy> Spawn(EnemySpawner spawner)
         {
-            List<Enemy> enemies = new();
+            List<ScriptedEnemy> enemies = new();
             enemies.Add(SpawnWiggler(spawner, new Vector2(19, 7), new Vector2(16, 7)));
             enemies.Add(SpawnWiggler(spawner, new Vector2(19, 3), new Vector2(16, 3)));
             enemies.Add(SpawnWiggler(spawner, new Vector2(-1, 7), new Vector2(2, 7)));
@@ -17,7 +18,7 @@ namespace Stages.CutMan
             return enemies;
         }
 
-        private static Enemy SpawnWiggler(EnemySpawner spawner, Vector2 spawnPosition, Vector2 wigglePosition)
+        private static ScriptedEnemy SpawnWiggler(EnemySpawner spawner, Vector2 spawnPosition, Vector2 wigglePosition)
         {
             var enemy = spawner.Spawn("blueChopper", spawnPosition, Quaternion.identity);
             enemy.SetActions(

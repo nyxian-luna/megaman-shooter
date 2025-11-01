@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Enemies.Components;
 using UnityEngine;
 
 namespace Stages
@@ -7,7 +8,7 @@ namespace Stages
     {
         [SerializeField] private StageEnemy[] enemyPool;
 
-        private readonly Dictionary<string, Enemy> _enemies = new();
+        private readonly Dictionary<string, ScriptedEnemy> _enemies = new();
 
         private void Awake()
         {
@@ -17,7 +18,7 @@ namespace Stages
             }
         }
 
-        public Enemy Spawn(string enemyName, Vector2 position, Quaternion rotation)
+        public ScriptedEnemy Spawn(string enemyName, Vector2 position, Quaternion rotation)
         {
             return Instantiate(_enemies[enemyName], position, rotation);
         }

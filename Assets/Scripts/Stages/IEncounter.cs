@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using Enemies.Components;
 
 namespace Stages
 {
     public interface IEncounter
     {
-        List<Enemy> Spawn(EnemySpawner spawner);
+        List<ScriptedEnemy> Spawn(EnemySpawner spawner);
     }
 }

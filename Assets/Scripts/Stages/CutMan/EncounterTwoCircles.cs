@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Enemies.Components;
 using EnemyScript;
 using UnityEngine;
 
@@ -6,17 +7,17 @@ namespace Stages.CutMan
 {
     public class EncounterTwoCircles : IEncounter
     {
-        public List<Enemy> Spawn(EnemySpawner spawner)
+        public List<ScriptedEnemy> Spawn(EnemySpawner spawner)
         {
-            List<Enemy> enemies = new();
+            List<ScriptedEnemy> enemies = new();
             enemies.AddRange(SpawnCircle(spawner, 7.5f, true));
             enemies.AddRange(SpawnCircle(spawner, 2.5f, false));
             return enemies;
         }
 
-        private static List<Enemy> SpawnCircle(EnemySpawner spawner, float y, bool isReverse)
+        private static List<ScriptedEnemy> SpawnCircle(EnemySpawner spawner, float y, bool isReverse)
         {
-            List<Enemy> enemies = new();
+            List<ScriptedEnemy> enemies = new();
             for (var i = 0; i < 6; i++)
             {
                 var enemy = spawner.Spawn("greenChopper", new Vector2(19 + i * 2.09f, y), Quaternion.identity);
