@@ -5,12 +5,18 @@ namespace Data
 {
     [System.Serializable]
     public class PlayerDamageEvent : UnityEvent<int, int> { }
+    
+    [System.Serializable]
+    public class PlayerHealingEvent : UnityEvent<int, int> { }
 
     public class PlayerStats : MonoBehaviour
     {
         [SerializeField] private int maxHealth;
+        
+        [Header("Events")]
         [SerializeField] private PlayerDamageEvent onDamageTaken;
         [SerializeField] public UnityEvent onDeath;
+        [SerializeField] public PlayerHealingEvent onHeal;
         
         private int _currentHealth;
 
@@ -41,6 +47,17 @@ namespace Data
             {
                 onDeath.Invoke();
             }
+        }
+
+        public void Heal(int healAmount)
+        {
+            if (_currentHealth == maxHealth)
+            {
+                return;
+            }
+
+            _currentHealth = Mathf.Min(_currentHealth + healAmount, maxHealth);
+            onHeal.Invoke(_currentHealth, maxHealth);
         }
     }
 }

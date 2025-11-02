@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4137ed0fd9ea45dda5898460107a8a2a, type: 3}
   m_Name: BlueChopper
   m_EditorClassIdentifier: 
-  displayName: 
-  health: 0
-  moveSpeed: 0
-  projectile: {fileID: 0}
+  displayName: Blue Chopper
+  health: 20
+  moveSpeed: 4
+  projectile: {fileID: 5944768475052163723, guid: bf68cada061aa5849abd49afe6c3bfde, type: 3}
   fireRateLowerBound: 1
   fireRateUpperBound: 3
-  shotsPerCluster: 1
+  shotsPerCluster: 3
   clusterShotSeparation: 0.2

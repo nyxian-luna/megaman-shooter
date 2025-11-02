@@ -11,7 +11,7 @@ namespace Enemies.Components
         [SerializeField] private EnemyData data;
         
         [Header("Events")]
-        [SerializeField] private UnityEvent OnDeath = new UnityEvent();
+        [SerializeField] private UnityEvent onDeath = new();
         
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
@@ -50,7 +50,7 @@ namespace Enemies.Components
     
         protected void Die()
         {
-            OnDeath.Invoke();
+            onDeath.Invoke();
             _animator.SetBool(_isDeadAnimId, true);
             GetComponent<Collider2D>().enabled = false;
         }

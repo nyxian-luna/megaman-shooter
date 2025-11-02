@@ -9,13 +9,13 @@ namespace Stages.CutMan
     {
         public List<ScriptedEnemy> Spawn(EnemySpawner spawner)
         {
-            List<ScriptedEnemy> enemies = new();
-            enemies.Add(SpawnWiggler(spawner, new Vector2(19, 7), new Vector2(16, 7)));
-            enemies.Add(SpawnWiggler(spawner, new Vector2(19, 3), new Vector2(16, 3)));
-            enemies.Add(SpawnWiggler(spawner, new Vector2(-1, 7), new Vector2(2, 7)));
-            enemies.Add(SpawnWiggler(spawner, new Vector2(-1, 3), new Vector2(2, 3)));
-
-            return enemies;
+            return new List<ScriptedEnemy>
+            {
+                SpawnWiggler(spawner, new Vector2(19, 7), new Vector2(16, 7)),
+                SpawnWiggler(spawner, new Vector2(19, 3), new Vector2(16, 3)),
+                SpawnWiggler(spawner, new Vector2(-1, 7), new Vector2(2, 7)),
+                SpawnWiggler(spawner, new Vector2(-1, 3), new Vector2(2, 3))
+            };
         }
 
         private static ScriptedEnemy SpawnWiggler(EnemySpawner spawner, Vector2 spawnPosition, Vector2 wigglePosition)

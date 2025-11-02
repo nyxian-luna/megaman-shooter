@@ -264,7 +264,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1268851975}
         m_TargetAssemblyTypeName: HealthController, Assembly-CSharp
-        m_MethodName: UpdateHealth
+        m_MethodName: RemoveHealth
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -305,6 +305,21 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Player.DamageController, Assembly-CSharp
         m_MethodName: Die
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHeal:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1268851975}
+        m_TargetAssemblyTypeName: HealthController, Assembly-CSharp
+        m_MethodName: AddHealth
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -808,9 +823,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPool:
   - name: greenChopper
-    enemy: {fileID: 1797341028970686991, guid: db9a70e044323c64695b5633adbbcffe, type: 3}
+    enemy: {fileID: 6467583704126262234, guid: 23b2246c6c429b440adc757781127dd0, type: 3}
   - name: blueChopper
-    enemy: {fileID: 8097599538323314231, guid: 3fe28a1af541ea840a1f764255eff32b, type: 3}
+    enemy: {fileID: 9149961309976689466, guid: c09f50a1a471a3c438a7ac4159dfc9ec, type: 3}
 --- !u!1 &1242199257
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 252840664}
+  secondsPerFillLine: 0.1
 --- !u!4 &1268851976
 Transform:
   m_ObjectHideFlags: 0
@@ -1278,6 +1294,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5116575283209804014, guid: c37a89a05bf0f494db8f82e7bd9d1a1c, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116575283209804014, guid: c37a89a05bf0f494db8f82e7bd9d1a1c, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6360419534553952039, guid: c37a89a05bf0f494db8f82e7bd9d1a1c, type: 3}

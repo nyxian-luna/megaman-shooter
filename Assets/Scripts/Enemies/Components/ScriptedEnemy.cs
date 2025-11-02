@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Enemies.Components
 {
-    public class ScriptedEnemy : MonoBehaviour
+    public class ScriptedEnemy : MonoBehaviour, IEnemy
     {
         private IEnemyAction[] _actions = Array.Empty<IEnemyAction>();
 

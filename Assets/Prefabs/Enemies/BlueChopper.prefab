@@ -61,9 +61,10 @@ GameObject:
   - component: {fileID: 8266512447479411488}
   - component: {fileID: 9149961309976689466}
   - component: {fileID: -9205220438361927301}
+  - component: {fileID: 1294898341589674924}
   m_Layer: 0
   m_Name: BlueChopper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,12 +248,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 6d1178eb3f8d1d14f8b6cc47f42d53ef, type: 2}
-  OnDeath:
+  onDeath:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 940248071714740805}
         m_TargetAssemblyTypeName: Enemies.Components.ConstantShooter, Assembly-CSharp
         m_MethodName: StopAttacking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1294898341589674924}
+        m_TargetAssemblyTypeName: Enemies.Components.ItemDrop, Assembly-CSharp
+        m_MethodName: DropItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -286,3 +299,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c372800137da406b91d55886fa2a131b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1294898341589674924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186939872551102580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990d55e4af914d9299cf75e0786c229e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropRateData: {fileID: 11400000, guid: 0777b6227a843444c8f5c5ac11d7239d, type: 2}
