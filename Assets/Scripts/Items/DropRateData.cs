@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace Items
@@ -8,14 +9,11 @@ namespace Items
         [SerializeField] private float dropRate = 0.1f;
         [SerializeField] private Drop[] drops;
 
-        private int _totalWeight = 0;
+        private System.Random _random;
 
-        private void Awake()
+        private void OnEnable()
         {
-            foreach (var drop in drops)
-            {
-                _totalWeight += drop.Weight;
-            }
+            _random ??= new System.Random((int)System.DateTime.Now.Ticks);
         }
 
         public GameObject GetDrop()
@@ -24,9 +22,11 @@ namespace Items
             {
                 return null;
             }
+
+            var totalWeight = drops.Sum(drop => drop.Weight);
             
             // OK, now choose one based on the weights.
-            var chosenWeight = Random.Range(0, _totalWeight);
+            var chosenWeight = _random.Next(0, totalWeight);
             var cumulativeWeight = 0;
             foreach (var drop in drops)
             {

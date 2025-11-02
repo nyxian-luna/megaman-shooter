@@ -24,6 +24,8 @@ namespace Data
 
         private void Awake()
         {
+            Random.InitState((int)System.DateTime.Now.Ticks);
+
             if (Instance == null)
             {
                 // Set the instance only once, and do not destroy it.
