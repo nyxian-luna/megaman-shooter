@@ -22,20 +22,11 @@ namespace Enemies.Components
             while (true)
             {
                 yield return new WaitForSeconds(data.GetTimeUntilNextShot());
-
-                for (var clusterShot = 1; clusterShot <= data.GetShotsPerCluster; clusterShot++)
-                {
-                    if (clusterShot > 1)
-                    {
-                        // Do not wait for the first shot, only on subsequent ones.
-                        yield return new WaitForSeconds(data.GetClusterShotSeparation);
-                    }
-                    data.CreateProjectile(transform);
-                }
+                yield return data.Shoot(transform);
             }
         }
 
-        public void StopAttacking()
+        private void StopAttacking()
         {
             StopCoroutine(_attackCoroutine);
         }

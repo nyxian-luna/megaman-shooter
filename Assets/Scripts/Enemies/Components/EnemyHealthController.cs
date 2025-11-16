@@ -16,6 +16,7 @@ namespace Enemies.Components
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
         private float _currentHealth;
+        private bool _isInvulnerable = true;
 
         private void Awake()
         {
@@ -26,24 +27,46 @@ namespace Enemies.Components
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("PlayerBullet"))
+            if (!other.CompareTag("PlayerBullet"))
             {
-                var projectile = other.GetComponent<Projectile>();
-                _currentHealth = Mathf.Max(0, _currentHealth - projectile.GetDamage());
-                Destroy(other.gameObject);
+                return;
+            }
+            
+            var projectile = other.GetComponent<Projectile>();
 
-                if (_currentHealth > 0)
-                {
-                    Hit();
-                }
-                else
-                {
-                    Die();
-                }
+            if (_isInvulnerable)
+            {
+                // There is a vulnerability setting, and it's not currently vulnerable.
+                // Disable a ricochet the bullet.
+                projectile.Ricochet();
+                other.enabled = false;
+                return;
+            }
+
+            _currentHealth = Mathf.Max(0, _currentHealth - projectile.GetDamage());
+            Destroy(other.gameObject);
+
+            if (_currentHealth > 0)
+            {
+                Hit();
+            }
+            else
+            {
+                Die();
             }
         }
 
-        protected void Hit()
+        public void MakeInvulnerable()
+        {
+            _isInvulnerable = true;
+        }
+
+        public void MakeVulnerable()
+        {
+            _isInvulnerable = false;
+        }
+
+        private void Hit()
         {
             StartCoroutine(Utils.Flash.SingleFlash(_spriteRenderer));
         }

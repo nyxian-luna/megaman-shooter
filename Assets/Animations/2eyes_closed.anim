@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: megaman_shooting
+  m_Name: 2eyes_closed
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -6707776521566452364, guid: 7a1d73d54726da14b857471009a4ba7e, type: 3}
+      value: {fileID: -5817678009440782846, guid: 5184f68972551114098bd02f6f677f03, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -6707776521566452364, guid: 7a1d73d54726da14b857471009a4ba7e, type: 3}
+    - {fileID: -5817678009440782846, guid: 5184f68972551114098bd02f6f677f03, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

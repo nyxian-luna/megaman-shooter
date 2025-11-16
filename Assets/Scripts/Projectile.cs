@@ -39,4 +39,10 @@ public abstract class Projectile : MonoBehaviour
     {
         _direction.x *= -1;
     }
+
+    public void Ricochet()
+    {
+        FlipDirection();
+        _direction.y = Random.Range(-0.75f, 0.75f);
+    }
 }

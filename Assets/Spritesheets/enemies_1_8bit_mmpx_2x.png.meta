@@ -644,7 +644,7 @@ TextureImporter:
       name: enemies_blue_chopper_2
       rect:
         serializedVersion: 2
-        x: 241
+        x: 242
         y: 573
         width: 34
         height: 42
@@ -1631,7 +1631,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_1_8bit_mmpx_2x_51
+      name: enemies_2eyes_1
       rect:
         serializedVersion: 2
         x: 763
@@ -1653,7 +1653,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_1_8bit_mmpx_2x_52
+      name: enemies_2eyes_2
       rect:
         serializedVersion: 2
         x: 801
@@ -1675,7 +1675,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_1_8bit_mmpx_2x_53
+      name: enemies_2eyes_3
       rect:
         serializedVersion: 2
         x: 839
@@ -1697,11 +1697,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_1_8bit_mmpx_2x_54
+      name: enemies_2eyes_laser_1
       rect:
         serializedVersion: 2
         x: 881
-        y: 457
+        y: 456
         width: 50
         height: 14
       alignment: 0
@@ -2093,7 +2093,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_1_8bit_mmpx_2x_72
+      name: enemies_2eyes_laser_2
       rect:
         serializedVersion: 2
         x: 881
@@ -3507,10 +3507,6 @@ TextureImporter:
       enemies_1_8bit_mmpx_2x_48: -7231312230159161056
       enemies_1_8bit_mmpx_2x_49: -4554191749688942229
       enemies_1_8bit_mmpx_2x_50: 3177060048665462566
-      enemies_1_8bit_mmpx_2x_51: -5817678009440782846
-      enemies_1_8bit_mmpx_2x_52: -2176757895941207365
-      enemies_1_8bit_mmpx_2x_53: 7248511225347808800
-      enemies_1_8bit_mmpx_2x_54: 2165511309850329718
       enemies_1_8bit_mmpx_2x_55: -7156435371290297694
       enemies_1_8bit_mmpx_2x_56: -4748132265038996368
       enemies_1_8bit_mmpx_2x_57: -5691790632668438315
@@ -3527,7 +3523,6 @@ TextureImporter:
       enemies_1_8bit_mmpx_2x_69: -2100904425961230100
       enemies_1_8bit_mmpx_2x_7: 6315295823740609444
       enemies_1_8bit_mmpx_2x_70: 6062838638186359162
-      enemies_1_8bit_mmpx_2x_72: -1678905591213725947
       enemies_1_8bit_mmpx_2x_73: 1118033955200402435
       enemies_1_8bit_mmpx_2x_74: -3540599550904748849
       enemies_1_8bit_mmpx_2x_77: -7157737065110281690
@@ -3553,6 +3548,11 @@ TextureImporter:
       enemies_1_8bit_mmpx_2x_95: 8435288023787414872
       enemies_1_8bit_mmpx_2x_96: -589714996206692661
       enemies_1_8bit_mmpx_2x_97: -6406001156434171233
+      enemies_2eyes_1: -5817678009440782846
+      enemies_2eyes_2: -2176757895941207365
+      enemies_2eyes_3: 7248511225347808800
+      enemies_2eyes_laser_1: 2165511309850329718
+      enemies_2eyes_laser_2: -1678905591213725947
       enemies_blue_chopper_1: -1852009871531195343
       enemies_blue_chopper_2: 9035804119566392906
       enemies_clam_closed: 5036148677416789153
