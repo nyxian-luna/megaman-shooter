@@ -15,6 +15,7 @@ MonoBehaviour:
   displayName: Clam
   health: 20
   moveSpeed: 2
+  startsInvulnerable: 1
   projectile: {fileID: 5944768475052163723, guid: 18e6441813758644a98c824842ef1b11, type: 3}
   fireRateLowerBound: 1
   fireRateUpperBound: 3

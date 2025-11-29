@@ -16,13 +16,14 @@ namespace Enemies.Components
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
         private float _currentHealth;
-        private bool _isInvulnerable = true;
+        private bool _isInvulnerable;
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _currentHealth = data.GetHealth;
+            _isInvulnerable = data.StartsInvulnerable;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

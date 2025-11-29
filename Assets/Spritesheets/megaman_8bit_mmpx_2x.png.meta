@@ -1359,7 +1359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: megaman_8bit_mmpx_2x_43
+      name: megaman_hair_1
       rect:
         serializedVersion: 2
         x: 5
@@ -1381,7 +1381,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: megaman_8bit_mmpx_2x_44
+      name: megaman_hair_2
       rect:
         serializedVersion: 2
         x: 63
@@ -2682,8 +2682,6 @@ TextureImporter:
       megaman_8bit_mmpx_2x_40: 8910764285108289273
       megaman_8bit_mmpx_2x_41: -8545339467469053613
       megaman_8bit_mmpx_2x_42: 2354622756935836983
-      megaman_8bit_mmpx_2x_43: 4912116490023630747
-      megaman_8bit_mmpx_2x_44: 5618843582689691566
       megaman_8bit_mmpx_2x_45: -4801645164816358914
       megaman_8bit_mmpx_2x_46: -5341110518617248167
       megaman_8bit_mmpx_2x_47: 5008616584691782217
@@ -2743,6 +2741,8 @@ TextureImporter:
       megaman_8bit_mmpx_2x_97: -5523342495838461027
       megaman_8bit_mmpx_2x_98: -6397943727420905858
       megaman_8bit_mmpx_2x_99: 8799877874992928278
+      megaman_hair_1: 4912116490023630747
+      megaman_hair_2: 5618843582689691566
       megaman_hit_1: -2377716824349526798
       megaman_hit_2: 6027429117565949657
       megaman_hit_boom: -7401133071210292340

@@ -15,6 +15,7 @@ MonoBehaviour:
   displayName: 2 Eyes
   health: 60
   moveSpeed: 2
+  startsInvulnerable: 1
   projectile: {fileID: 2461606826506730464, guid: d1637e5ce36d99945805732c52e85e7c, type: 3}
   fireRateLowerBound: 2
   fireRateUpperBound: 4

@@ -8,9 +8,11 @@ namespace Enemies.Data
         [SerializeField] private string displayName;
         [SerializeField] private int health;
         [SerializeField] private float moveSpeed;
+        [SerializeField] private bool startsInvulnerable;
         
         public string GetDisplayName => displayName;
         public int GetHealth => health;
         public float GetMoveSpeed => moveSpeed;
+        public bool StartsInvulnerable => startsInvulnerable;
     }
 }
