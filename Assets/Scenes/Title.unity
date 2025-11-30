@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 224581117}
   - component: {fileID: 224581116}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 242113922}
   - component: {fileID: 242113926}
   - component: {fileID: 242113927}
+  - component: {fileID: 242113928}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -383,6 +384,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bd1792c83c04e4cb5bf1ed6d2679d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkCount: 6
+  blinkSpeed: 0.1
+--- !u!114 &242113928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242113921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39963351c7d494696d9938de1ed7dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &992710696
@@ -608,10 +623,10 @@ MonoBehaviour:
       - m_Target: {fileID: 242113927}
         m_TargetAssemblyTypeName: UI.TitleSelect, Assembly-CSharp
         m_MethodName: Continue
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1775775894}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1005,7 +1020,7 @@ GameObject:
   - component: {fileID: 1775775895}
   - component: {fileID: 1775775894}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1302,10 +1317,10 @@ MonoBehaviour:
       - m_Target: {fileID: 242113927}
         m_TargetAssemblyTypeName: UI.TitleSelect, Assembly-CSharp
         m_MethodName: NewGame
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 224581116}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Stage Select
