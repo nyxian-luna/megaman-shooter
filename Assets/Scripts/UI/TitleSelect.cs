@@ -41,7 +41,6 @@ namespace UI
             var originalColor = textToBlink.color;
             var blinkColor = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
 
-            // Blink 3 times.
             for (var i = 0; i < blinkCount; i++)
             {
                 textToBlink.color = blinkColor;
